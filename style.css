@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    background-image: url(12.jpg);
+}
+.text{
+    position: absolute;
+    top: 50px;
+
+    color: black;
+    font-size: 100px;
+}
+.road{
+    width: 1023px;
+    height: 458px;
+
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(1.gif);
+
+    position: relative;
+    border: 2px solid black;
+}
+.kolobok{
+    height: 230px;
+    width: 150px;
+    
+    background-image: url(6-3.png);
+    background-size: 100%;
+
+    border-radius: 50%;
+    bottom: 0px;
+
+    position: absolute;
+    left: 54%;
+
+    transform: translate(-50%, -50%);
+
+    animation: kolobok 3s linear infinite;
+}
+.wall-box{
+    height: 100px;
+    width: 100px;
+    margin-top: 800px;
+
+
+    position: absolute;
+    bottom: 0px;
+    left: 56%;
+
+    transform: translate(-50%, -50%);
+}
+.wall{
+    background-color: black;
+    width: 70px;
+    height: 15px;
+
+    
+    bottom: 90px;
+    left: 56%;
+    transform: translatex(-50%);
+    animation: wall 3s linear infinite;
+}
+@keyframes wall{
+
+ 30%{
+        left: 10%;
+        transform: scalex(3) scaleY(2) translatex(-1%);
+        bottom: 50px;
+
+    }
+    60%{
+        left: 10%;
+        transform: scalex(6) scaleY(4) translatex(-1%);
+        bottom: -10px;
+    }
+    90%{
+        left: 10%;
+        transform: scalex(11) scaleY(8) translatex(-1%);
+        bottom: -150px;
+    }
+    100%{
+        background-color: rgba(255, 0, 0, 0);
+    }
+}
+@keyframes kolobok {
+    30%{
+        bottom: 100px;
+    }
+    100%{
+    }
+}
